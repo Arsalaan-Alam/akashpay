@@ -5,7 +5,7 @@ import { MoonPayBuyWidget } from '@moonpay/moonpay-react';
 const Home = () => {
   const [visible, setVisible] = useState(false);
   const [amount, setAmount] = useState('');
-  const [priceData, setPriceData] = useState(null);
+  const [priceData, setPriceData] = useState('');
 
   useEffect(() => {
     const fetchPriceData = async () => {
@@ -60,7 +60,7 @@ const Home = () => {
                     className="amount-input"
                   />
                   <div className="token-amount">
-                    <span className="usd-amount">{"$" + amount}</span>
+                    <span className="usd-amount">{calculateTokenAmount() ? `$${amount}` : '$0'}</span>
                     <span className="token-icon">⇄</span>
                     {amount && priceData && (
                       <span className="usd-amount">$AKT {calculateTokenAmount()}</span>

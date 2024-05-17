@@ -18,7 +18,7 @@ const Header = () => {
 const Footer = () => {
   return (
     <footer className="footer">
-    <p>&copy; 2023 AkashPay. All rights reserved.</p>
+    <p>&copy; 2024 AkashPay. All rights reserved.</p>
   </footer>
   )
 }
